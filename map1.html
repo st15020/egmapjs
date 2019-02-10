@@ -54,13 +54,12 @@ window.onload = function() {
         waypoints: [
         L.latLng(gpos.coords.latitude, gpos.coords.longitude),
        L.latLng(35.943560, 136.188917)
-	 
+	 ]
+}).addTo(map);
     }, function() {
         alert("現在位置に取得に失敗！")
     })
     
-  ]
-}).addTo(map);
 }
 </script>
 <style>
