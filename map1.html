@@ -41,7 +41,7 @@ window.onload = function() {
             var lat = item.lat.value;
             var lng = item.lng.value;
             var name = item.name.value;
-            map.addIcon(lat, lng, name, "病院.jpg", 64, 64)
+            map.addIcon(lat, lng, name, "病院.jpg", 30, 30)
         }
     });
     var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 64, 64)
@@ -53,7 +53,7 @@ window.onload = function() {
     L.Routing.control({
         waypoints: [
         L.latLng(gpos.coords.latitude, gpos.coords.longitude),
-       L.latLng(35.943560, 136.188917)
+       L.latLng(35.947233,136.193821 )
 	 ]
 }).addTo(map);
     }, function() {
