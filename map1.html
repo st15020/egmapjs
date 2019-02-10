@@ -41,10 +41,10 @@ window.onload = function() {
             var lat = item.lat.value;
             var lng = item.lng.value;
             var name = item.name.value;
-            map.addIcon(lat, lng, name, "病院.jpg", 30, 30)
+            map.addIcon(lat, lng, name, "病院.jpg", 40, 40)
         }
     });
-    var current = map.addIcon(0, 0, "現在地", "iOS の画像.png",30,30)
+    var current = map.addIcon(0, 0, "現在地", "iOS の画像.png",60,60)
     navigator.geolocation.watchPosition(function(gpos) {
         const pos = [ gpos.coords.latitude, gpos.coords.longitude ]
         current.setLatLng(pos)
@@ -53,7 +53,7 @@ window.onload = function() {
     L.Routing.control({
         waypoints: [
         L.latLng(gpos.coords.latitude, gpos.coords.longitude),
-       L.latLng(35.947233,136.193821 )
+       L.latLng( 35.970011,136.178112 )
 	 ]
 }).addTo(map);
     }, function() {
