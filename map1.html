@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 <script src="https://code4fukui.github.io/egmapjs/egmap.js"></script>
+	[...]
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+[...]
 <link rel="stylesheet" href="https://code4fukui.github.io/egmapjs/egmap.css"/>
 <script src="https://fukuno.jig.jp/fukuno.js"></script>
 <script src="https://code4fukui.github.io/egmapjs/sparql.js"></script>
@@ -19,7 +25,12 @@ window.onload = function() {
 	map.addIcon(35.970011 ,136.178112, "公立丹南病院")
 	
 }
-
+L.Routing.control({
+  waypoints: [
+    L.latLng(35.943560,136.188917),
+    L.latLng(35.970011, 136.178112)
+  ]
+}).addTo(map);
 </script>
 <style>
 
