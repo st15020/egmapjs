@@ -21,8 +21,7 @@ window.onload = function() {
     var map = initMap('mapid')
     map.setZoom(8)
     map.panTo([ 35.943560,136.188917 ]) // 鯖江駅
-    
-    map.addIcon(35.943560,136.188917,"さばええき") 
+  
     
     // SPARQLクエリー
     var query = `
@@ -53,7 +52,7 @@ window.onload = function() {
     L.Routing.control({
         waypoints: [
         L.latLng(gpos.coords.latitude, gpos.coords.longitude),
-       L.latLng( 35.970011,136.178112 )
+       L.latLng(35.673894 , 139.751696)
 	 ]
 }).addTo(map);
     }, function() {
@@ -70,7 +69,7 @@ h1 { font-size: 5vw; margin: 0; }
 
 </style></head><body>
 
-<h1>送迎状況</h1>
+<h1>けいたの現在地検索</h1>
 <div id="mapid"></div>
 
 </body></html>
